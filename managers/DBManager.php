@@ -1,4 +1,5 @@
 <?php
+namespace Managers;
 
 abstract class DBManager
 {
