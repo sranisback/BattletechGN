@@ -29,16 +29,15 @@ class Stars
     private $level;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\UnitTypes", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $type;
-
-    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Novas")
      * @ORM\JoinColumn(name="nova", referencedColumnName="id", nullable=false)
      */
     private $nova;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $type;
 
     public function getId(): ?int
     {
@@ -69,18 +68,6 @@ class Stars
         return $this;
     }
 
-    public function getType(): ?UnitTypes
-    {
-        return $this->type;
-    }
-
-    public function setType(UnitTypes $type): self
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
     public function getNova(): ?Novas
     {
         return $this->nova;
@@ -89,6 +76,18 @@ class Stars
     public function setNova(?Novas $nova): self
     {
         $this->nova = $nova;
+
+        return $this;
+    }
+
+    public function getType(): ?int
+    {
+        return $this->type;
+    }
+
+    public function setType(int $type): self
+    {
+        $this->type = $type;
 
         return $this;
     }

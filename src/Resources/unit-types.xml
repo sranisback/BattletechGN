@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bt_types>
+    <unit_type type_id="1">
+        <name>Infanterie Légère</name>
+        <caliber>1</caliber>
+        <armor>1</armor>
+        <icon>foot.png</icon>
+        <price>5</price>
+        <ability ability_id="2">
+            <name>Armes Portatives</name>
+        </ability>
+    </unit_type>
+    <unit_type type_id="2">
+        <name>Infanterie Motorisée</name>
+        <caliber>1</caliber>
+        <armor>1</armor>
+        <icon>moto.png</icon>
+        <price>7</price>
+        <resources>
+            <resource resource_type="4">
+                Moteurs Terrestres
+            </resource>
+        </resources>
+        <ability ability_id="4">
+            <name>Contournement</name>
+        </ability>
+    </unit_type>
+    <unit_type type_id="3">
+        <name>Infanterie Lourde</name>
+        <caliber>1</caliber>
+        <armor>2</armor>
+        <icon>elem.png</icon>
+        <price>10</price>
+        <resources>
+            <resource resource_type="6">
+                Hautes Technologies
+            </resource>
+        </resources>
+        <ability ability_id="1">
+            <name>Alpha-Strike</name>
+        </ability>
+    </unit_type>
+    <unit_type type_id="4">
+        <name>Véhicules Blindés</name>
+        <caliber>2</caliber>
+        <armor>2</armor>
+        <icon>tank.png</icon>
+        <price>12</price>
+        <resources>
+            <resource resource_type="4">
+                Moteurs Terrestres
+            </resource>
+            <resource resource_type="2">
+                Blindage Composite
+            </resource>
+        </resources>
+        <ability ability_id="5">
+            <name>Fer de Lance</name>
+        </ability>
+    </unit_type>
+    <unit_type type_id="5">
+        <name>Véhicules Aériens</name>
+        <caliber>2</caliber>
+        <armor>1</armor>
+        <icon>air.png</icon>
+        <price>10</price>
+        <resources>
+            <resource resource_type="3">
+                Missiles Embarqués
+            </resource>
+        </resources>
+        <ability ability_id="3">
+            <name>Bombardement</name>
+        </ability>
+    </unit_type>
+    <unit_type type_id="6">
+        <name>Mechas Légers</name>
+        <caliber>2</caliber>
+        <armor>1</armor>
+        <icon>reco.png</icon>
+        <price>10</price>
+        <resources></resources>
+        <ability ability_id="4">
+            <name>Contournement</name>
+        </ability>
+    </unit_type>
+    <unit_type type_id="7">
+        <name>Mechas de Combat</name>
+        <caliber>2</caliber>
+        <armor>2</armor>
+        <icon>fight.png</icon>
+        <price>15</price>
+        <resources>
+            <resource resource_type="5">
+                Myomer
+            </resource>
+            <resource resource_type="1">
+                Armes Lourdes
+            </resource>
+        </resources>
+        <ability ability_id="1">
+            <name>Alpha-Strike</name>
+        </ability>
+    </unit_type>
+    <unit_type type_id="8">
+        <name>Omni-Mechas</name>
+        <caliber>2</caliber>
+        <armor>2</armor>
+        <icon>omni.png</icon>
+        <price>20</price>
+        <resources>
+            <resource resource_type="6">
+                Hautes Technologies
+            </resource>
+            <resource resource_type="5">
+                Myomers
+            </resource>
+        </resources>
+        <ability ability_id="6">
+            <name>Omni-Composants</name>
+        </ability>
+    </unit_type>
+    <unit_type type_id="9">
+        <name>Mechas de Soutien</name>
+        <caliber>3</caliber>
+        <armor>2</armor>
+        <icon>supp.png</icon>
+        <price>20</price>
+        <resources>
+            <resource resource_type="3">
+                Missiles Embarqués
+            </resource>
+            <resource resource_type="5">
+                Myomers
+            </resource>
+        </resources>
+        <ability ability_id="3">
+            <name>Bombardement</name>
+        </ability>
+    </unit_type>
+    <unit_type type_id="10">
+        <name>Mechas Lourds</name>
+        <caliber>3</caliber>
+        <armor>3</armor>
+        <icon>heavy.png</icon>
+        <price>30</price>
+        <resources>
+            <resource resource_type="1">
+                Armes Lourdes
+            </resource>
+            <resource resource_type="2">
+                Blindage Composite
+            </resource>
+            <resource resource_type="5">
+                Myomers
+            </resource>
+        </resources>
+        <ability ability_id="5">
+            <name>Fer de Lance</name>
+        </ability>
+    </unit_type>
+</bt_types>

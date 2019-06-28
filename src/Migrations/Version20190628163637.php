@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20190625125118 extends AbstractMigration
+final class Version20190628163637 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,6 +22,7 @@ final class Version20190625125118 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
+        $this->addSql('CREATE TABLE abilities (id INT AUTO_INCREMENT NOT NULL, name_abil VARCHAR(20) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
         $this->addSql('CREATE TABLE clusters (id INT AUTO_INCREMENT NOT NULL, galaxy INT NOT NULL, name VARCHAR(40) DEFAULT NULL, INDEX IDX_EC895D3FF6BB1376 (galaxy), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
         $this->addSql('CREATE TABLE commanders (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(40) NOT NULL, faction VARCHAR(40) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
         $this->addSql('CREATE TABLE galaxies (id INT AUTO_INCREMENT NOT NULL, commander INT NOT NULL, name VARCHAR(40) NOT NULL, UNIQUE INDEX UNIQ_71A267FE42D318BA (commander), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
@@ -43,12 +44,14 @@ final class Version20190625125118 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
+        $this->addSql('ALTER TABLE unit_types DROP FOREIGN KEY FK_D202F73B35CFEE3C');
         $this->addSql('ALTER TABLE novas DROP FOREIGN KEY FK_66F3B7E6E5C56994');
         $this->addSql('ALTER TABLE galaxies DROP FOREIGN KEY FK_71A267FE42D318BA');
         $this->addSql('ALTER TABLE clusters DROP FOREIGN KEY FK_EC895D3FF6BB1376');
         $this->addSql('ALTER TABLE unit_types DROP FOREIGN KEY FK_D202F73BA6A507E');
         $this->addSql('ALTER TABLE stars DROP FOREIGN KEY FK_11DC02CFAE65C8F');
         $this->addSql('ALTER TABLE stars DROP FOREIGN KEY FK_11DC02CC54C8C93');
+        $this->addSql('DROP TABLE abilities');
         $this->addSql('DROP TABLE clusters');
         $this->addSql('DROP TABLE commanders');
         $this->addSql('DROP TABLE galaxies');
